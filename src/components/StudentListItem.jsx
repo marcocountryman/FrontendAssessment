@@ -14,13 +14,22 @@ function StudentListItem({student}) {
     const averageGrade = calcAverage(student.grades);
 
     return(
-        <div>
-            <img src= {student.pic} alt="student-pic" />
-            <p>{student.firstName} {student.lastName}</p>
-            <p>Email: {student.email}</p>
-            <p>Company: {student.company}</p>
-            <p>Skill: {student.skill}</p>
-            <p>Average: {averageGrade} %</p>
+        
+        <div className = "student-profile">
+
+            <div className = "student-image-container">
+                <img src= {student.pic} alt="student-pic" className = "student-image"/>
+            </div>
+            
+            <div className = "student-profile-info">
+                <p>{student.firstName} {student.lastName}</p>
+                <p>Email: {student.email}</p>
+                <p>Company: {student.company}</p>
+                <p>Skill: {student.skill}</p>
+                <p>Average: {averageGrade} %</p>
+            </div>
+            
+
         </div>
     )
 }

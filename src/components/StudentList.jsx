@@ -7,6 +7,7 @@ function StudentList({ students }) {
     return(
         
         students.map( (student, idx) => {
+            
             return (
                 <StudentListItem key = {student.id} student = {student}/>
             )
