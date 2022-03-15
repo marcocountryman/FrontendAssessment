@@ -1,4 +1,5 @@
 import React from "react";
+import './StudentListItem.css';
 
 function StudentListItem({student}) {
 
@@ -14,12 +15,12 @@ function StudentListItem({student}) {
 
     return(
         <div>
+            <img src= {student.pic} alt="student-pic" />
             <p>{student.firstName} {student.lastName}</p>
             <p>Email: {student.email}</p>
             <p>Company: {student.company}</p>
             <p>Skill: {student.skill}</p>
             <p>Average: {averageGrade} %</p>
-            <img src= {student.pic} alt="student-pic" />
         </div>
     )
 }

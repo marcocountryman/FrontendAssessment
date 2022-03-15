@@ -1,5 +1,27 @@
+body {
+    background-color: #E7E9EB;
+    font-family: 'Raleway', sans-serif;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .student-list-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 65%;
+    height: 80%;
+    background-color: white;
+    border-radius: 8px;
+    overflow-y: scroll;
+    box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.student-list-container::-webkit-scrollbar {
+    display: none;
 }
