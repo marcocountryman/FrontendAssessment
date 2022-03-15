@@ -14,7 +14,7 @@ function StudentListItem({student}) {
     const averageGrade = calcAverage(student.grades);
 
     return(
-        
+
         <div className = "student-profile">
 
             <div className = "student-image-container">
@@ -22,11 +22,15 @@ function StudentListItem({student}) {
             </div>
             
             <div className = "student-profile-info">
-                <p>{student.firstName} {student.lastName}</p>
-                <p>Email: {student.email}</p>
-                <p>Company: {student.company}</p>
-                <p>Skill: {student.skill}</p>
-                <p>Average: {averageGrade} %</p>
+                <p className = "student-name">{student.firstName.toUpperCase()} {student.lastName.toUpperCase()}</p>
+                
+                <div className = "student-statistics">
+                    <p>Email: {student.email}</p>
+                    <p>Company: {student.company}</p>
+                    <p>Skill: {student.skill}</p>
+                    <p>Average: {averageGrade} %</p>
+                </div>
+
             </div>
             
 

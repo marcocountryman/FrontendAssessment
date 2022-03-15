@@ -2,6 +2,8 @@
     display: flex;
     width: 100%;
     border-bottom: 1px solid #E7E9EB;
+    padding-bottom: 10px;
+    /* border: 1px solid blue; */
 }
 
 .student-image-container {
@@ -11,9 +13,30 @@
     width: 20%;
 }
 
+.student-profile-info {
+    /* border: 2px solid green; */
+    width: 80%;
+}
+
 .student-profile img {
-    border: 1px solid #E7E9EB;
+    border: 2px solid #E7E9EB;
     border-radius: 50%;
     width: 75%;
-    height: 70%;
+    height: 75%; 
+}
+
+.student-name {
+    font-weight: bolder;
+    font-size: 36px;
+    margin: 10px;
+}
+
+.student-statistics {
+    padding-left: 25px;
+    color: gray;
+    /* border: 1px solid gold; */
+}
+
+.student-statistics p {
+   margin: 1%;
 }
