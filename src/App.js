@@ -1,9 +1,10 @@
 import React,{ useState, useEffect } from 'react';
-import StudentList from './components/StudentList';
-import "./components/StudentList.css";
+import StudentList from './Components/StudentList';
+import "./Components/StudentList.css";
 
 function App() {
   const [ students, setStudents ] = useState([]);
+  const [ searchWord, setSearchWord ] = useState("");
 
   useEffect( () => {
         fetch('https://api.hatchways.io/assessment/students')
@@ -15,7 +16,16 @@ function App() {
     <div className="App">
       
       <div className = "student-list-container">
-        <StudentList students = {students}/>
+
+        <div className = "search-bar">
+          <input 
+          type = "text"
+          className = "search-input"
+          onChange = {(e) => {setSearchWord(e.target.value)}} 
+          placeholder = "Search by name"/>
+        </div>
+
+        <StudentList students = {students} searchWord = {searchWord}/>
       </div>
 
     </div>

@@ -25,3 +25,19 @@ body {
 .student-list-container::-webkit-scrollbar {
     display: none;
 }
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.search-input {
+    border: none;
+    border-bottom: 1px solid black;
+    color: gray;
+    font-size: 18px;
+    width: 97%;
+    padding-left: 10px;
+}
