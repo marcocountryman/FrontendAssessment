@@ -3,7 +3,6 @@
     width: 100%;
     border-bottom: 1px solid #E7E9EB;
     padding-bottom: 10px;
-    /* border: 1px solid blue; */
 }
 
 .student-image-container {
@@ -14,7 +13,6 @@
 }
 
 .student-profile-info {
-    /* border: 2px solid green; */
     width: 80%;
 }
 
@@ -34,7 +32,6 @@
 .student-statistics {
     padding-left: 25px;
     color: gray;
-    /* border: 1px solid gold; */
 }
 
 .student-statistics p {
