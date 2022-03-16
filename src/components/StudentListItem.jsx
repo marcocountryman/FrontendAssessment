@@ -22,8 +22,8 @@ function StudentListItem({student}) {
     student.grades.map( (grade,idx) => {
         return(
             <li key = {`grade-${idx}`} className = "student-grade-list-item">
-                <p>Test {idx+1}</p>
-                <p>{grade}%</p>
+                <p>Test {idx+1}:</p>
+                <p className = "grade">{grade}%</p>
             </li>
         )
     })

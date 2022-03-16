@@ -19,8 +19,8 @@
 .student-profile img {
     border: 2px solid #E7E9EB;
     border-radius: 50%;
-    width: 75%;
-    height: 75%; 
+    width: 100px;
+    height: 100px; 
 }
 
 .student-name {
@@ -51,6 +51,15 @@
     cursor: pointer;
 }
 
-.student {
-    
+.student-grade-list-item {
+    list-style: none;
+    display: flex;
+}
+
+.student-grade-list-item p {
+    margin: 0%;
+}
+
+.grade {
+    padding-left: 10px;
 }
