@@ -44,7 +44,7 @@ function StudentListItem({student}) {
                     <p>Email: {student.email}</p>
                     <p>Company: {student.company}</p>
                     <p>Skill: {student.skill}</p>
-                    <p>Average: {averageGrade} %</p>
+                    <p>Average: {averageGrade}%</p>
                     <ul className = "student-grade-list">{gradeList}</ul>
                 </div>
 

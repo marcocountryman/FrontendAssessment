@@ -6,21 +6,21 @@
 }
 
 .student-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
+    padding-top: 20px;
+    padding-left: 20px; 
 }
 
 .student-profile-info {
-    width: 80%;
+    width: 650px;
+    padding-left: 25px;
 }
 
 .student-profile img {
     border: 2px solid #E7E9EB;
     border-radius: 50%;
     width: 100px;
-    height: 100px; 
+    height: 100px;
+ 
 }
 
 .student-name {
@@ -44,6 +44,8 @@
     font-size: 48px;
     padding-right: 15px;
     color: gray;
+    height: 50px;
+    width: 50px;
 }
 
 .toggle-butn:hover {
