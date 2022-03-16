@@ -38,3 +38,19 @@
    margin: 1%;
 }
 
+.toggle-butn {
+    background-color: white;
+    border: none;
+    font-size: 48px;
+    padding-right: 15px;
+    color: gray;
+}
+
+.toggle-butn:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.student {
+    
+}

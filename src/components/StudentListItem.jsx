@@ -18,6 +18,17 @@ function StudentListItem({student}) {
     let toggleIcon = toggle ? <button onClick = {() => setToggle(false)} className = "toggle-butn">+</button> : 
     <button onClick = {() => setToggle(true)} className = "toggle-butn">-</button>
 
+    let gradeList = !toggle ? 
+    student.grades.map( (grade,idx) => {
+        return(
+            <li key = {`grade-${idx}`} className = "student-grade-list-item">
+                <p>Test {idx+1}</p>
+                <p>{grade}%</p>
+            </li>
+        )
+    })
+    : null;
+
     return(
 
         <div className = "student-profile">
@@ -34,6 +45,7 @@ function StudentListItem({student}) {
                     <p>Company: {student.company}</p>
                     <p>Skill: {student.skill}</p>
                     <p>Average: {averageGrade} %</p>
+                    <ul className = "student-grade-list">{gradeList}</ul>
                 </div>
 
             </div>
