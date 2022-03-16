@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import './StudentListItem.css';
 
 function StudentListItem({student}) {
 
+    const [ toggle, setToggle ] = useState(true);
+    
     function calcAverage(grades) {
         let sum = 0;
         for(let grade of grades) {
@@ -12,6 +14,9 @@ function StudentListItem({student}) {
     }
     
     const averageGrade = calcAverage(student.grades);
+
+    let toggleIcon = toggle ? <button onClick = {() => setToggle(false)} className = "toggle-butn">+</button> : 
+    <button onClick = {() => setToggle(true)} className = "toggle-butn">-</button>
 
     return(
 
@@ -33,7 +38,7 @@ function StudentListItem({student}) {
 
             </div>
             
-
+            {toggleIcon}
         </div>
     )
 }

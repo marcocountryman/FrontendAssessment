@@ -8,12 +8,14 @@ function StudentList({ students, searchWord }) {
         const checkFirstName = firstName.toLowerCase();
         const checkLastName = lastName.toLowerCase();
         const checkSearch = searchWord.toLowerCase();
+        const fullName = checkFirstName + " " + checkLastName;
 
         for(let i = 0; i < checkSearch.length; i++) {
-            if(checkSearch[i] !== checkFirstName[i] && checkSearch[i] !== checkLastName[i] ) return false;
+            if(checkSearch[i] !== checkFirstName[i] && checkSearch[i] !== checkLastName[i] && fullName[i] !== checkSearch[i] ) return false;
         }
         return true;
     }
+
 
     return(
         
