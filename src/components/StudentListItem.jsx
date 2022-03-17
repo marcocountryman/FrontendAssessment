@@ -14,14 +14,14 @@ function StudentListItem({student, addTagToStudentList }) {
         }
         return sum / grades.length
     }
-
+   
     function handleSubmit(e) {
         e.preventDefault();
         addTagToStudentList(student.id,tag);
         setTag("");
     }
- 
-    const averageGrade = useMemo(() => calcAverage(student.grades), student.grades);
+    
+    const averageGrade = useMemo(() => calcAverage(student.grades), [student.grades]);
 
     let renderTags = student.tags.length > 0 ? 
     student.tags.map( (tag,idx) => {

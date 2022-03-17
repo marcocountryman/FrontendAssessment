@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import StudentListItem from './StudentListItem';
 
 function StudentList({ students, searchWord, searchTag, setStudents, addTagToStudentList }) {

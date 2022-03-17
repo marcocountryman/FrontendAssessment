@@ -8,7 +8,7 @@ function App() {
   const [ searchWord, setSearchWord ] = useState("");
   const [ searchTag, setSearchTag ] = useState("");
   
-  //Add Tag keys to student list
+  //Adds new key value pair to student objects => tags: []
   function addTagKey(data) {
     const newStudents = [...data.students]
 
@@ -18,13 +18,13 @@ function App() {
     setStudents(newStudents);
   }
 
-  //Makes API call once App loads
+  //Makes API call once App loads and add tag key
   useEffect( () => {
         fetch('https://api.hatchways.io/assessment/students')
             .then(res => res.json())
             .then(data => addTagKey(data))
     }, []);
-  
+  //Finds student by id and adds tags to student state variable
   function addTagToStudentList(id,tag) {
    
       const studentList = [...students];
