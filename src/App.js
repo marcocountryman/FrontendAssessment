@@ -6,6 +6,7 @@ import SearchBar from './Components/SearchBar';
 function App() {
   const [ students, setStudents ] = useState([]);
   const [ searchWord, setSearchWord ] = useState("");
+  const [ searchTag, setSearchTag ] = useState("");
   
   //Add Tag keys to student list
   function addTagKey(data) {
@@ -43,9 +44,9 @@ function App() {
       
       <div className = "student-list-container">
 
-        <SearchBar setSearchWord = {setSearchWord}/>
-        <SearchBar/>
-        <StudentList students = {students} searchWord = {searchWord} setStudents = {setStudents} addTagToStudentList = {addTagToStudentList}/>
+        <SearchBar setSearchWord = {setSearchWord} typeSearch = {{type: "name"}}/>
+        <SearchBar setSearchTag = {setSearchTag} typeSearch = {{type: "tag"}}/>
+        <StudentList students = {students} searchTag = {searchTag} searchWord = {searchWord} setStudents = {setStudents} addTagToStudentList = {addTagToStudentList}/>
         
       </div>
 

@@ -21,13 +21,15 @@ function StudentListItem({student, addTagToStudentList }) {
         setTag("");
     }
  
-    const averageGrade = useMemo(() => calcAverage(student.grades), [student.grades]);
+    const averageGrade = useMemo(() => calcAverage(student.grades), student.grades);
 
     let renderTags = student.tags.length > 0 ? 
-    student.tags.map( (tag) => {
+    student.tags.map( (tag,idx) => {
         return (
-            <li>
-                {tag}
+            <li key = {`tag-${idx}`} className = "tag-item">
+                <div className = "tag-text">
+                    {tag}
+                </div>
             </li>
         )
     }) : null;
@@ -64,7 +66,7 @@ function StudentListItem({student, addTagToStudentList }) {
                     <p>Skill: {student.skill}</p>
                     <p>Average: {averageGrade} %</p>
                     <ul className = "student-grade-list">{gradeList}</ul>
-                    <ul>{renderTags}</ul>
+                    <ul className = "tag-item-container">{renderTags}</ul>
 
                     < form className = "input-tag-container" onSubmit = {(e) => handleSubmit(e)}>
                         <input type="text" 
@@ -76,7 +78,6 @@ function StudentListItem({student, addTagToStudentList }) {
                     </form>
                 </div>
 
-               
             </div>
             
             {toggleIcon}
