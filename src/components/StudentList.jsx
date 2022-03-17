@@ -3,7 +3,6 @@ import StudentListItem from './StudentListItem';
 
 function StudentList({ students, searchWord }) {
 
-    //I need to check and make sure the names match starting from the first index
     function nameChecker(firstName, lastName, searchWord) {
         const checkFirstName = firstName.toLowerCase();
         const checkLastName = lastName.toLowerCase();
@@ -32,7 +31,6 @@ function StudentList({ students, searchWord }) {
                 <StudentListItem key = {student.id} student = {student}/>
             )
         })
-        
     )
 }
 

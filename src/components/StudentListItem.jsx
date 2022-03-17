@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import './StudentListItem.css';
 
 function StudentListItem({student}) {
@@ -13,7 +13,7 @@ function StudentListItem({student}) {
         return sum / grades.length
     }
     
-    const averageGrade = calcAverage(student.grades);
+    const averageGrade = useMemo(() => calcAverage(student.grades), [student.grades]);
 
     let toggleIcon = toggle ? <button onClick = {() => setToggle(false)} className = "toggle-butn">+</button> : 
     <button onClick = {() => setToggle(true)} className = "toggle-butn">-</button>
@@ -44,7 +44,7 @@ function StudentListItem({student}) {
                     <p>Email: {student.email}</p>
                     <p>Company: {student.company}</p>
                     <p>Skill: {student.skill}</p>
-                    <p>Average: {averageGrade}%</p>
+                    <p>Average: {averageGrade} %</p>
                     <ul className = "student-grade-list">{gradeList}</ul>
                 </div>
 

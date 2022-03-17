@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react';
 import StudentList from './Components/StudentList';
 import "./Components/StudentList.css";
+import SearchBar from './Components/SearchBar';
 
 function App() {
   const [ students, setStudents ] = useState([]);
@@ -17,15 +18,9 @@ function App() {
       
       <div className = "student-list-container">
 
-        <div className = "search-bar">
-          <input 
-          type = "text"
-          className = "search-input"
-          onChange = {(e) => {setSearchWord(e.target.value)}} 
-          placeholder = "Search by name"/>
-        </div>
-
+        <SearchBar setSearchWord = {setSearchWord}/>
         <StudentList students = {students} searchWord = {searchWord}/>
+        
       </div>
 
     </div>
