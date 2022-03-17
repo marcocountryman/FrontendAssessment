@@ -4,6 +4,12 @@ import './StudentListItem.css';
 function StudentListItem({student}) {
 
     const [ toggle, setToggle ] = useState(true);
+    const [ tag, setTag ] = useState("");
+    const [ tags, setTags ] = useState([]);
+    
+    function addTag(tag) {
+        setTags( prevTags => ([...prevTags, tag ]));
+    }
     
     function calcAverage(grades) {
         let sum = 0;
@@ -46,8 +52,18 @@ function StudentListItem({student}) {
                     <p>Skill: {student.skill}</p>
                     <p>Average: {averageGrade} %</p>
                     <ul className = "student-grade-list">{gradeList}</ul>
+                    
+                    < form className = "input-tag-container" onSubmit = {() => addTag(tag)}>
+                        <input type="text" 
+                        className = "input-tag"
+                        placeholder="Add a tag" 
+                        onChange = {(e) => {setTag(e.target.value)}}
+                        value = {tag}
+                        />
+                    </form>
                 </div>
 
+               
             </div>
             
             {toggleIcon}

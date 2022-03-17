@@ -18,9 +18,8 @@
 .student-profile img {
     border: 2px solid #E7E9EB;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
- 
+    width: 125px;
+    height: 125px;
 }
 
 .student-name {
@@ -31,7 +30,6 @@
 
 .student-statistics {
     padding-left: 25px;
-    color: gray;
 }
 
 .student-statistics p {
@@ -64,4 +62,17 @@
 
 .grade {
     padding-left: 10px;
+}
+
+.input-tag-container {
+   border-bottom: 1px solid lightgray;
+   padding-bottom: 10px;
+   width: 20%;
+}
+
+.input-tag {
+    padding-left: 5px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    width: 90%;
 }
