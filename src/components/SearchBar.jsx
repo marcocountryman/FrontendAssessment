@@ -3,7 +3,6 @@ import './SearchBar.css';
 
 function SearchBar({ setSearchWord }) {
 
-
     return(
         <div className = "search-bar">
             <input 

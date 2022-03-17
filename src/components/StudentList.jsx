@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import StudentListItem from './StudentListItem';
 
-function StudentList({ students, searchWord }) {
+function StudentList({ students, searchWord, setStudents, addTagToStudentList }) {
 
     function nameChecker(firstName, lastName, searchWord) {
         const checkFirstName = firstName.toLowerCase();
         const checkLastName = lastName.toLowerCase();
         const checkSearch = searchWord.toLowerCase();
         const fullName = checkFirstName + " " + checkLastName;
-
+        console.log(students)
         for(let i = 0; i < checkSearch.length; i++) {
             if(checkSearch[i] !== checkFirstName[i] && checkSearch[i] !== checkLastName[i] && fullName[i] !== checkSearch[i] ) return false;
         }
@@ -26,9 +26,8 @@ function StudentList({ students, searchWord }) {
                 return student;
             }
         }).map( (student, idx) => {
-            
             return (
-                <StudentListItem key = {student.id} student = {student}/>
+                <StudentListItem key = {student.id} student = {student} setStudents = {setStudents} addTagToStudentList = {addTagToStudentList}/>
             )
         })
     )
