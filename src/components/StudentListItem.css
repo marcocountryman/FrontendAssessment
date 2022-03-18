@@ -1,5 +1,6 @@
 .student-profile {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid #E7E9EB;
     padding-bottom: 10px;
@@ -11,7 +12,7 @@
 }
 
 .student-profile-info {
-    width: 650px;
+    width: inherit;
     padding-left: 25px;
 }
 
@@ -24,12 +25,14 @@
 
 .student-name {
     font-weight: bolder;
-    font-size: 36px;
+    font-size: 3vw;
     margin: 10px;
+    white-space: nowrap;
 }
 
 .student-statistics {
     padding-left: 25px;
+    font-size: 1.2vw;
 }
 
 .student-statistics p {
@@ -39,8 +42,8 @@
 .toggle-butn {
     background-color: white;
     border: none;
-    font-size: 48px;
-    padding-right: 15px;
+    font-size: 4vw;
+    padding-right: 25px;
     color: gray;
     height: 50px;
     width: 50px;
