@@ -2,7 +2,7 @@ import React from 'react';
 import StudentListItem from './StudentListItem';
 
 function StudentList({ students, searchWord, searchTag, setStudents, addTagToStudentList }) {
-
+    
     function nameChecker(firstName, lastName, searchWord) {
         const checkFirstName = firstName.toLowerCase();
         const checkLastName = lastName.toLowerCase();

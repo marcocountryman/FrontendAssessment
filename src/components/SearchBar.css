@@ -2,20 +2,21 @@
     display: flex;
     justify-content: center;
     padding-top: 10px;
-    width: 65%;
+    width: 98%;
     height: 40px;
     padding-bottom: 15px;
 }
 
 .search-input {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #E7E9EB;
     color: gray;
     font-size: 18px;
     width: 97%;
     padding-left: 10px;
     font-family: 'Raleway', sans-serif;
-    width: inherit;
-    padding: 0px 20px 0px 20px;
-    box-sizing: border-box;
+    /* margin-bottom: 10px; */
+    /* width: inherit; */
+    /* padding: 0px 20px 0px 20px; */
+    /* box-sizing: border-box; */
 }
