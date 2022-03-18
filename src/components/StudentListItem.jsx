@@ -20,7 +20,7 @@ function StudentListItem({student, addTagToStudentList }) {
         addTagToStudentList(student.id,tag);
         setTag("");
     }
-    
+    //Cache average function so not computed on every re render
     const averageGrade = useMemo(() => calcAverage(student.grades), [student.grades]);
 
     let renderTags = student.tags.length > 0 ? 

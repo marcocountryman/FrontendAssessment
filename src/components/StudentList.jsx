@@ -3,6 +3,8 @@ import StudentListItem from './StudentListItem';
 
 function StudentList({ students, searchWord, searchTag, setStudents, addTagToStudentList }) {
     
+    //Check search paramameters against firstname, lastname, and full name
+
     function nameChecker(firstName, lastName, searchWord) {
         const checkFirstName = firstName.toLowerCase();
         const checkLastName = lastName.toLowerCase();
@@ -14,6 +16,7 @@ function StudentList({ students, searchWord, searchTag, setStudents, addTagToStu
         }
         return true;
     }
+    //Checks search tag parameters against tags in key of tag
 
     function hasTag (tags, searchTag) {
         const checkTag = searchTag.toLowerCase();

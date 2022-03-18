@@ -21,11 +21,16 @@ body {
     box-shadow: 2px 2px 2px 2px lightgray;
 }
 
-/* .student-list::-webkit-scrollbar {
-    display: none;
-} */
-
 .student-list{
+    height: 85%;
     width: 100%;
     overflow-y: scroll;
+}
+
+.search-bar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15%;
 }

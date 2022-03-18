@@ -8,7 +8,7 @@ function App() {
   const [ searchWord, setSearchWord ] = useState("");
   const [ searchTag, setSearchTag ] = useState("");
   
-  //Adds new key value pair to student objects => tags: []
+  //Adds new key value pair to student object retrieved from API => tags: []
   function addTagKey(data) {
     const newStudents = [...data.students]
 
@@ -24,7 +24,9 @@ function App() {
             .then(res => res.json())
             .then(data => addTagKey(data))
     }, []);
-  //Finds student by id and adds tags to student state variable
+
+  //Finds student by id and adds tags to student.tags then sets state to new state
+  //Function is prop drilled down to child component so parent component state can be changed from child
   function addTagToStudentList(id,tag) {
    
       const studentList = [...students];
@@ -44,8 +46,11 @@ function App() {
       
       <div className = "student-list-container">
         
-        <SearchBar setSearchWord = {setSearchWord} typeSearch = {{type: "name"}}/>
-        <SearchBar setSearchTag = {setSearchTag} typeSearch = {{type: "tag"}}/>
+        <div className = "search-bar-container">
+          <SearchBar setSearchWord = {setSearchWord} typeSearch = {{type: "name"}}/>
+          <SearchBar setSearchTag = {setSearchTag} typeSearch = {{type: "tag"}}/>
+        </div>
+        
         <div className = "student-list">
           <StudentList students = {students} searchTag = {searchTag} searchWord = {searchWord} setStudents = {setStudents} addTagToStudentList = {addTagToStudentList}/>
         </div>
