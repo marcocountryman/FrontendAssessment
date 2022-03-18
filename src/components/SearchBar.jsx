@@ -4,25 +4,28 @@ import './SearchBar.css';
 function SearchBar({ setSearchWord, setSearchTag, typeSearch}) {
 
     let searchComp = typeSearch.type === "name" ? 
-      
-        <input 
-        type = "text"
-        className = "search-input"
-        onChange = {(e) => {setSearchWord(e.target.value)}} 
-        placeholder = "Search by name"/>
+        <div className = "search-bar-name">
+            <input 
+            type = "text"
+            className = "search-input"
+            onChange = {(e) => {setSearchWord(e.target.value)}} 
+            placeholder = "Search by name"/>
+        </div>
          :
-       
-        <input 
-        type = "text"
-        className = "search-input"
-        onChange = {(e) => {setSearchTag(e.target.value)}} 
-        placeholder = "Search by tag"/>
+        <div className = "search-bar-tag">
+            <input 
+            type = "text"
+            className = "tag-input"
+            onChange = {(e) => {setSearchTag(e.target.value)}} 
+            placeholder = "Search by tag"/>
+        </div>
+        
        
     return(
-        
-        <div className = "search-bar">
-           {searchComp}
-        </div>
+        <>
+            {searchComp}
+        </>
+       
     )
 }
 export default SearchBar
