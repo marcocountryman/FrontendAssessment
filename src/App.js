@@ -43,10 +43,12 @@ function App() {
     <div className="App">
       
       <div className = "student-list-container">
-
+        
         <SearchBar setSearchWord = {setSearchWord} typeSearch = {{type: "name"}}/>
         <SearchBar setSearchTag = {setSearchTag} typeSearch = {{type: "tag"}}/>
-        <StudentList students = {students} searchTag = {searchTag} searchWord = {searchWord} setStudents = {setStudents} addTagToStudentList = {addTagToStudentList}/>
+        <div className = "student-list">
+          <StudentList students = {students} searchTag = {searchTag} searchWord = {searchWord} setStudents = {setStudents} addTagToStudentList = {addTagToStudentList}/>
+        </div>
         
       </div>
 

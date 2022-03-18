@@ -18,10 +18,14 @@ body {
     height: 80%;
     background-color: white;
     border-radius: 8px;
-    overflow-y: scroll;
     box-shadow: 2px 2px 2px 2px lightgray;
 }
 
-.student-list-container::-webkit-scrollbar {
+/* .student-list::-webkit-scrollbar {
     display: none;
+} */
+
+.student-list{
+    width: 100%;
+    overflow-y: scroll;
 }

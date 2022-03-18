@@ -1,25 +1,24 @@
 .search-bar-name {
     display: flex;
     justify-content: center;
-    width: 65%;
+    width: 100%;
     /* padding-top: 1%; */
     /* padding-bottom: 1%; */
     /* position: absolute; */
-    position: fixed;
+    /* position: fixed; */
 }
 
 .search-bar-tag {
     display: flex;
     justify-content: center;
-    width: 65%;
-    position: fixed;
+    width: 100%;
+    /* position: fixed; */
     /* padding-top: 10%; */
-    top: 16%;
+    /* top: 16%; */
 }
 
 .search-input {
     border: none;
-    padding-bottom: 1.25%;
     border-bottom: 2px solid #E7E9EB;
     color: gray;
     font-size: 1.5vw;
